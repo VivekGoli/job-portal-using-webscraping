@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="role.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_r.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="role_pics/software.png" alt="Company Logo">
+    <div class="company-description">
+      <h2>Software Engineer / Developer</h2>
+      <p>Software engineers are responsible for the overall design and architecture of software applications. They work closely with stakeholders to understand their requirements and then translate those requirements into technical specifications. They also develop and test software code, and they work with other engineers to integrate software components into a complete system.
+        Software developers are responsible for writing the code that makes up software applications. They work from technical specifications to write clean, efficient, and maintainable code. They also test their code to ensure that it meets requirements and that it works as expected.</p>
+      <p>Responsibilities of a software engineer or software developer:
+        <ul>
+            <li>Gathering and analyzing user requirements</li>
+            <li>Designing and developing software applications</li>
+            <li>Writing and testing code</li>
+            <li>Debugging and fixing bugs</li>
+            <li>Deploying and maintaining software applications</li>
+            <li>Documenting software applications</li>
+            <li>Working with other engineers to integrate software components into a complete system</li>
+        </ul>
+      </p>
+      <p>The demand for software engineers and software developers is expected to grow at a faster-than-average rate in India in the coming days. This is due to a number of factors, including the growth of the Indian IT industry, the increasing adoption of digital technologies by businesses, and the government's focus on promoting digital transformation.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/role_pages/softwareengineer')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

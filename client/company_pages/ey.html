@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/ey.jpg" alt="Company Logo">
+    <div class="company-description">
+      <h2>Ernest & Young</h2>
+      <p>Ernst & Young Global Limited, commonly referred to as EY, is a multinational professional services network headquartered in London, England. EY provides assurance, tax, transaction and advisory services to companies in more than 150 countries. The company has over 300,000 employees and generated revenues of US$28.7 billion in fiscal year 2022.
+      </p>
+      <p>EY is one of the Big Four professional services networks, along with Deloitte, KPMG, and PwC. The Big Four are the four largest professional services networks in the world, and they provide a wide range of services to companies of all sizes, including Assurance, Tax, Transcation and Advisory.
+      </p>
+      <p>
+        EY is a great place to work for freshers who are looking for a challenging and rewarding career. The company offers a variety of training and development programs, as well as opportunities to take on new challenges and responsibilities. EY is also committed to diversity and inclusion, and it is a great place to work for people from all walks of life.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://localhost:5000/client/company_pages/ey')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

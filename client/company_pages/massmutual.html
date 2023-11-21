@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/massmutual.jpeg" alt="Company Logo">
+    <div class="company-description">
+      <h2>Mass Mutual</h2>
+      <p>The Massachusetts Mutual Life Insurance Company, also known as MassMutual, is a Springfield, Massachusetts-based life insurance company. Founded in 1851, MassMutual provides financial products such as life insurance, disability income insurance, long-term care insurance, retirement/401(k) plan services, and annuities.MassMutual ranks at 100 in the 2022 Fortune 500 list of the largest United States corporations by total revenue. The company has revenues of $10.7 billion and assets under management of $312 billion (as of 2022).</p>
+      <p>The Global Capability Center in Hyderabad is spacious and is characterized by long fluid work bays which can house 2000+ employees. Spanning 147,190+ square feet of space, the facility is spread across the 6th, 7th 8th, and 9th floors of BSR IT SEZ. Located in the heart of the Financial District, the facility boasts world-class infrastructure, and amenities, enabled by state-of-the-art technology and security systems. The vibrant space boasts an in-house gymnasium/aerobics center, yoga room, indoor games room, mother and wellness room, 500+ seater cafeteria, and lounge seating making it a collaborative space for all. In the future, the infrastructure will also provide a common creche and tuck-shops.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://localhost:5000/client/company_pages/massmutual')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

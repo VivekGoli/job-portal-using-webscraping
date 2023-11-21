@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="role.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_r.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="role_pics/dataengineer.png" alt="Company Logo">
+    <div class="company-description">
+      <h2>Data Engineer</h2>
+      <p>A data engineer is an IT professional who designs, builds, and maintains data infrastructure and pipelines that enable data scientists and analysts to access, analyze, and utilize data for business decision-making. They play a crucial role in the data lifecycle, ensuring that data is collected, stored, transformed, and made available in a way that is efficient, scalable, and secure.</p>
+      <p>Responsibilities of a Data Engineer:
+        <ul>
+            <li><strong>Data infrastructure design and architecture</strong></li>
+            <li><strong>Data pipeline development and maintenance</strong></li>
+            <li><strong>Data storage and management</strong></li>
+            <li><strong>Data quality assurance and monitoring</strong></li>
+            <li><strong>Data security and compliance</strong></li>
+        </ul>
+      </p>
+      <p>Technologies required by Data Engineers:
+        <ul>
+            <li><strong>Programming languages: Python, R, Java, Scala, SQL</strong></li>
+            <li><strong>Data integration tools: Informatica PowerCenter, Talend Open Studio, Apache Kafka</strong></li>
+            <li><strong>Workflow orchestration tools: Apache Airflow, Luigi, Prefect</strong></li>
+            <li><strong>Big Data tools: Apche Hadoop, Cassandra, Spark</strong></li>
+            <li><strong>Database : MySQL, Oracle; MongoDB and other NoSQL databases </strong></li>
+            <li><strong>Data warehousing and lake technologies: Amazon Redshift, Azure Data Lake Storage, Google Cloud Dataproc, Snowflake Cloud Datawarehouse</strong></li>
+            <li><strong>Cloud computing platforms: AWS, Azure, Google Cloud Platform</strong></li>
+        </ul>
+      </p>
+      <p>The scope of the data engineer role in India is expected to expand as data becomes more integral to business operations. Data engineers will be in high demand to support a wide range of initiatives, including real-time data analytics, machine learning, and Internet of Things (IoT) data management.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/role_pages/dataengineer')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

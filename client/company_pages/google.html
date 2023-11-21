@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/google.jpg" alt="Company Logo">
+    <div class="company-description">
+      <h2>Google</h2>
+      <p>Google is a multinational technology company specializing in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, along with Amazon, Apple, Meta (Facebook), and Microsoft.
+      </p>
+      <p>Google's rapid growth since incorporation has triggered a chain of products, acquisitions, and partnerships beyond its core search engine. It offers online productivity software (Google Docs, Google Sheets, and Google Slides), email (Gmail), cloud storage (Google Drive), instant messaging (Google Chat), blogging (Blogger), video-sharing (YouTube), cloud computing (Google Cloud Platform), translation (Google Translate), mapping (Google Maps), photo organization and editing (Google Photos), and video chatting (Google Duo). Google has developed operating systems for mobile devices based on the Linux kernel, such as Android, which is the most popular operating system in the world. Google has moved increasingly into hardware; from 2010, it released the Pixel smartphone line and Google Home smart speaker. Google's virtual assistant software, Google Assistant, is built into many devices, including smartphones, smart speakers, and smart displays.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://localhost:5000/client/company_pages/google')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="role.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_r.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="role_pics/analyst.webp" alt="Company Logo">
+    <div class="company-description">
+      <h2>Data Analyst</h2>
+      <p>A data analyst is a professional who collects, cleans, transforms, and analyzes data to extract meaningful insights and help organizations make informed decisions. They play a crucial role in bridging the gap between data and decision-making, translating complex data sets into actionable insights that can drive business growth and improve operational efficiency.</p>
+      <p>Responsibilities of a Data Analyst:
+        <ul>
+            <li><strong>Data collection and acquisition</strong></li>
+            <li><strong>Data cleaning and preparation</strong></li>
+            <li><strong>Exploratory data analysis (EDA)</strong></li>
+            <li><strong>Statistical modeling and analysis</strong></li>
+            <li><strong>Data visualization and communication</strong></li>
+        </ul>
+      </p>
+      <p>Technologies required for Data Analysis:
+        <ul>
+            <li><strong>Programming languages: Python, R, SQL</strong></li>
+            <li><strong>Data analysis tools: Tableau, Power BI, Qlik Sense</strong></li>
+            <li><strong>Statistical software: SAS, SPSS</strong></li>
+            <li><strong>Data mining tools: Informatica, RapidMiner</strong></li>
+            <li><strong>Cloud computing platforms: AWS, Azure, Google Cloud Platform</strong></li>
+        </ul>
+      </p>
+      <p>The demand for data analysts in India is expected to grow significantly in the coming years. This is due to the increasing adoption of data analytics across various industries, including finance, healthcare, e-commerce, and retail. Organizations are increasingly recognizing the value of data-driven decision-making, and they are investing in data analytics teams to extract insights from their vast data repositories.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/role_pages/dataanalyst')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

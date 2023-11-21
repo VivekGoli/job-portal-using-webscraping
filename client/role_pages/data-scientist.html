@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="role.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_r.js"></script>
+</head>
+
+<body>
+ 
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="role_pics/datascientist.png" alt="Company Logo">
+    <div class="company-description">
+      <h2>Data Scientist</h2>
+      <p>A data scientist is a professional who applies analytical and statistical techniques to extract meaningful insights from data. They bridge the gap between data and decision-making, helping organizations make informed choices based on data-driven evidence. Data scientists play a crucial role in various industries, including finance, healthcare, marketing, and e-commerce.</p>
+      <p>Responsibilities of a Data Scientist:
+        <ul>
+            <li><strong>Data mining or extracting usable data from valuable data sources</strong></li>
+            <li><strong>Using machine learning tools to select features, create and optimize classifiers</strong></li>
+            <li><strong>Processing, cleansing, and validating the integrity of data to be used for analysis</strong></li>
+            <li><strong>Analyzing large amounts of information to find patterns and solutions</strong></li>
+            <li><strong>Developing prediction systems and machine learning models</strong></li>
+            <li><strong>Propose solutions and strategies to tackle business challenges</strong></li>
+        </ul>
+      </p>
+      <p>Technologies required by Data Engineers:
+        <ul>
+            <li><strong>Programming Skills: Python, R, Java, Scala, SQL</strong></li>
+            <li><strong>Statistics – Good applied statistical skills, including knowledge of statistical tests, distributions, regression, maximum likelihood estimators, etc.</strong></li>
+            <li><strong>Machine Learning – Supervised, Unsupervised learning, Neural Networks</strong></li>
+            <li><strong>Data visualization - Power BI, Tableau, seaborn</strong></li>
+            <li><strong>Database : MySQL, Oracle; MongoDB and other NoSQL databases </strong></li>
+            <li><strong>Data warehousing and lake technologies: Amazon Redshift, Azure Data Lake Storage, Google Cloud Dataproc, Snowflake Cloud Datawarehouse</strong></li>
+            <li><strong>Machine learning libraries: TensorFlow, scikit-learn, PyTorch</strong></li>
+        </ul>
+      </p>
+      <p>The demand for data scientists in India is expected to grow significantly in the coming years. This is due to the increasing adoption of data analytics and artificial intelligence across various industries, including finance, healthcare, e-commerce, and retail. Organizations are increasingly relying on data scientists to extract meaningful insights from their vast data repositories and make informed decisions based on data-driven evidence.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/role_pages/datascientist')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

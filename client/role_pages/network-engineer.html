@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="role.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_r.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="role_pics/networkengineer.png" alt="Company Logo">
+    <div class="company-description">
+      <h2>Data Engineer</h2>
+      <p>A network engineer is a technology professional who designs, implements, and maintains computer networks. They are responsible for ensuring that networks are reliable, secure, and efficient. Network engineers work in a variety of industries, including telecommunications, finance, healthcare, and manufacturing.</p>
+      <p>Responsibilities of a Network Engineer:
+        <ul>
+            <li><strong>Design and implement network infrastructure:</strong> Network engineers design and implement the hardware and software that make up a computer network.</li>
+            <li><strong>Monitor and troubleshoot network performance:</strong> Network engineers monitor network performance to identify and resolve problems.</li>
+            <li><strong>Secure networks:</strong> Network engineers implement security measures to protect networks from cyberattacks.</li>
+            <li><strong>Maintain network documentation:</strong> Network engineers maintain up-to-date documentation of the network infrastructure.</li>
+        </ul>
+      </p>
+      <p>Technologies required by Data Engineers:
+        <ul>
+            <li><strong>Strong understanding of networking concepts:</strong> Network engineers need a strong understanding of networking concepts, such as TCP/IP, routing, and switching.</li>
+            <li><strong>Experience with network devices:</strong> Network engineers need experience with a variety of network devices, such as routers, switches, firewalls, and wireless access points.</li>
+            <li><strong>Troubleshooting skills:</strong> Network engineers need strong troubleshooting skills to identify and resolve network problems.</li>
+            <li><strong>Communication skills:</strong> Network engineers need to be able to communicate effectively with both technical and non-technical users.</li>
+            <li><strong>Problem-solving skills:</strong> Network engineers need to be able to think critically and solve problems effectively.</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/role_pages/networkengineer')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

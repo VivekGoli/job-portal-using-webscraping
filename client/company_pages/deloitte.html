@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/deloitte.jpg_large" alt="Company Logo">
+    <div class="company-description">
+      <h2>Deloitte</h2>
+      <p>Deloitte Touche Tohmatsu Limited (DTTL), commonly referred to as Deloitte, is a multinational professional services network headquartered in London, United Kingdom. Deloitte is one of the Big Four accounting firms, alongside KPMG, Ernst & Young, and PricewaterhouseCoopers. The company provides audit, tax, consulting, financial advisory, risk advisory, and related services to individuals, businesses, and governments.</p>
+      <p>Deloitte has been operating in India for over 75 years. The company has a strong presence in India with over 50,000 employees across 20 offices in major cities. Deloitte India is one of the largest professional services firms in India and serves a wide range of clients, including multinational corporations, Indian companies, and government entities.</p>
+      <p>Deloitte India is committed to corporate social responsibility (CSR) and has a number of CSR initiatives in place. The company's CSR initiatives focus on education, healthcare, and environmental sustainability.</p>
+      <p>Deloitte India offers a variety of career opportunities for people with a variety of skills and experience. The company is committed to developing its employees and offers a number of training and development programs.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://localhost:5000/client/company_pages/deloitte')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

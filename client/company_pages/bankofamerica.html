@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/boa.webp" alt="Company Logo">
+    <div class="company-description">
+      <h2>Bank of America</h2>
+      <p>"Bank of America is one of the world’s leading financial institutions, offering a comprehensive set of financial products and best in-class advisory services. Our award winning franchise, with a client first attitude, is a pioneer in India. We combine the best of local expertise and global connectivity for local clients looking to expand globally and for those seeking access to one of the world’s fastest growing economies. For this reason, it is a priority market for Bank of America and an integral part of our global strategy. We’ve been here a long time, having first established a presence in 1964, and our commitment goes beyond business with our social impact initiatives transforming millions of lives across the country. Looking forward, we are uniquely positioned to help India broaden its global connectivity and deliver on its limitless potential."</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/company_pages/bankofamerica')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

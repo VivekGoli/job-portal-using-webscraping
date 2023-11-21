@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  }
+
+  header {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  h1 {
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .company-section {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .company-section img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+
+  .company-description p {
+    flex: 1;
+    text-align: justify;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .company-description {
+    flex: 1;
+    text-align: justify;
+  }
+
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+  }
+
+  th {
+    background-color: #b3d9ff;
+    color: black;
+  }
+
+  .job-details-btn {
+    background-color: #b3d9ff;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  td:last-child {
+    width: 1%; /* Set a small width for the last column */
+  }

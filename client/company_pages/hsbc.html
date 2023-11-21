@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/hsbc.jpg_large" alt="Company Logo">
+    <div class="company-description">
+      <h2>HSBC</h2>
+      <p>HSBC Holdings plc is a British multinational banking and financial services organization headquartered in London, England. It is the world's largest bank by assets, with US$3.095 trillion as of December 2022. HSBC traces its origins to a Hong Kong trading house in 1865. The bank opened branches in Shanghai in 1865 and was first formally incorporated in 1866.</p>
+      <p>HSBC is a universal bank, providing a wide range of financial services to individuals, businesses, and governments. These services include retail banking, commercial banking, investment banking, private banking, asset management, and global banking and markets. HSBC has a global network of over 39 million customers and operates in over 70 countries and territories.</p>
+      <p>HSBC Technology India (HTI), previously called HSBC Global Technology (GLT), is part of HSBC Technology, the Bank's technology function. HTI is located in Pune, India, and Hyderabad, India, with the former being the headquarters. HSBC Technology India has been in existence for over 15 years, and currently supports the majority of the software products that make up the Bank's technology eco-system.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://localhost:5000/client/company_pages/hsbc')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

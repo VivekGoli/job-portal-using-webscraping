@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="role.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_r.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="role_pics/manager.png" alt="Company Logo">
+    <div class="company-description">
+      <h2>HR Manager</h2>
+      <p>A human resources (HR) manager is responsible for overseeing all aspects of an organization's workforce, from hiring and onboarding to employee relations and compensation. They play a crucial role in ensuring that an organization has the right people in the right roles to achieve its goals.</p>
+      <p>Key responsibilities of an HR Manager:
+        <ul>
+            <li><strong>Recruitment and hiring</strong></li>
+            <li><strong>Employee onboarding</strong></li>
+            <li><strong>Employee relations</strong></li>
+            <li><strong>Compensation and benefits</strong></li>
+            <li><strong>Performance management</strong></li>
+            <li><strong>Compliance -</strong> HR managers ensure that the organization complies with all applicable employment laws and regulations.</li>
+        </ul>
+      </p>
+      <p>India's large pool of skilled HR professionals and its growing IT industry make it a prime location for HR management jobs. The Indian government is also promoting digital transformation initiatives, which is further fueling the demand for HR managers with expertise in technology and data analytics.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/role_pages/hrmanager')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

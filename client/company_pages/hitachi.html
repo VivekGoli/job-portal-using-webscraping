@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/hitachi.jpg_large" alt="Company Logo">
+    <div class="company-description">
+      <h2>Hitachi Consulting</h2>
+      <p>Hitachi Consulting Software Services India Pvt. Ltd. offers industry-leading business consulting solutions to accelerate digital transformation of enterprises and co-create IoT-enabled digital solutions for smart manufacturing systems and smart spaces.</p>
+      <p>Hitachi Consulting leverages its extensive expertise in IT and OT (Operational Technologies) to co-create IoT-era digital solutions and offers professional consulting services to help businesses accelerate digital transformation for maximum ROI. Hitachi Consulting's smart spaces and video intelligence solutions employ the latest technologies to provide solutions for Smart Cities, Smart Campuses, and smart manufacturing industries.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://localhost:5000/client/company_pages/hitachi')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="role.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_r.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="role_pics/testing.png" alt="Company Logo">
+    <div class="company-description">
+      <h2>Software Testing Engineer</h2>
+      <p>A software testing engineer is responsible for ensuring that software applications meet their requirements and are free of defects. They play a crucial role in the software development lifecycle, ensuring that the software released to users is of high quality and meets expectations.</p>
+      <p>Responsibilities of a software testing engineer:
+        <ul>
+            <li><strong>Developing and executing test plans</strong></li>
+            <li><strong>Identifying and reporting defects</strong></li>
+            <li><strong>Communicating with stakeholders</strong></li>
+            <li><strong>Contributing to continuous improvement</strong></li>
+        </ul>
+      </p>
+      <p>The increasing complexity of software applications is also driving the demand for software testing engineers. As software applications become more sophisticated and interconnected, the need for thorough testing and defect identification becomes even more critical. Software testing engineers play a vital role in ensuring the quality and reliability of these complex systems.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/role_pages/softwaretesting')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

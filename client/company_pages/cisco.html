@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/cisco.webp" alt="Company Logo">
+    <div class="company-description">
+      <h2>Cisco</h2>
+      <p>Cisco Systems, Inc., commonly known as Cisco, is an American multinational technology conglomerate headquartered in San Jose, California. It develops, manufactures, and sells networking hardware, software, telecommunications equipment, and other high-technology services and products. Cisco specializes in specific technical areas of networking and communications, such as routers, switches, wireless technology, optical networking, and related software.</p>
+      <p>Cisco India has three manufacturing plants in India, located in Bangalore, Chennai, and Pune. These plants manufacture a wide range of networking products, including routers, switches, and wireless access points.</p>
+      <p>Cisco India has a large research and development (R&D) center in Bangalore. The R&D center develops new networking products and services for the Indian market.</p>
+      <p>Cisco India is committed to the Indian market and is constantly investing in new technologies and services. The company is also committed to helping India's digital transformation. Cisco India has a number of initiatives in place to help India's businesses and organizations adopt new technologies, such as cloud computing and the Internet of Things (IoT)</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://localhost:5000/client/company_pages/cisco')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

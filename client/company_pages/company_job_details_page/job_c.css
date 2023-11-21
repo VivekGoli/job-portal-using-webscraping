@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    color: #333;
+  }
+
+  header {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Merriweather', serif;
+    font-size: larger;
+  }
+
+  .job-details {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .job-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  .company-location {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .company-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .job-description {
+    line-height: 1.6;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .link-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #0066ff;
+    border-radius: 5px;
+  }
+
+  .link-button a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+  }

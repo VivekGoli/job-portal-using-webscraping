@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_c.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="company_pics/sap.jpg" alt="Company Logo">
+    <div class="company-description">
+      <h2>SAP</h2>
+      <p>SAP is a German multinational software corporation that develops enterprise software to manage business operations. It is the world's largest provider of enterprise application software. Headquartered in Walldorf, Germany, SAP has over 109,000 employees and more than 105,700 customers in 180 countries.
+      </p>
+      <p>SAP's products and services are used by businesses of all sizes, from small and medium-sized enterprises (SMEs) to large multinational corporations. SAP's products are used to manage a wide range of business processes, including:
+        <br><br>
+        <strong>Finance and accounting:</strong> SAP's financial and accounting software helps businesses to manage their finances, including general ledger, accounts receivable, and accounts payable.<br><br>
+        <strong>Human resources (HR):</strong> SAP's HR software helps businesses to manage their employees, including payroll, benefits, and recruitment.<br><br>
+        <strong>Supply chain management (SCM):</strong> SAP's SCM software helps businesses to manage their supply chains, including procurement, inventory, and logistics.<br><br>
+        <strong>Customer relationship management (CRM):</strong> SAP's CRM software helps businesses to manage their relationships with their customers, including sales, marketing, and customer service.<br><br>
+        <strong>Project management:</strong> SAP's project management software helps businesses to plan, execute, and monitor their projects.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://localhost:5000/client/company_pages/sap')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Job</title>
+  <link rel="stylesheet" href="role.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="dataload_r.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Find My Job</h1>
+  </header>
+
+  <div class="company-section">
+    <img src="role_pics/fullstack.png" alt="Company Logo">
+    <div class="company-description">
+      <h2>Full Stack Developer</h2>
+      <p>A full-stack developer is a software engineer who can work on both the front-end and back-end of a web application. They have a broad understanding of both client-side and server-side technologies, and they can work independently to develop and maintain entire web applications.</p>
+      <p>Responsibilities of a full-stack developer:
+        <ul>
+            <li><strong>Front-end development:</strong> Full-stack developers are responsible for the user interface (UI) of a web application.</li>
+            <li><strong>Back-end development:</strong> Full-stack developers are also responsible for the server-side code of a web application. This includes writing the code that handles user requests, processes data, and interacts with databases.</li>
+            <li><strong>Testing:</strong> Full-stack developers should be able to test their own code, as well as code written by other developers.</li>
+            <li><strong>Deployment:</strong> Full-stack developers should be able to deploy web applications to production environments.</li>
+        </ul>
+      </p>
+      <p>The increasing demand for web applications is also driving the demand for full-stack developers. As businesses move their operations online and rely on web applications to reach their customers and partners, the need for skilled full-stack developers to develop and maintain these applications will continue to grow.</p>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("started");
+      fetch('http://localhost:5000/client/role_pages/fullstackdeveloper')
+      .then(response => response.json())
+      .then(data => loadHTMLTable(data['data']));
+    });
+  </script>
+</body>
+</html>
